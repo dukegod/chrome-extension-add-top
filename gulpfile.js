@@ -31,5 +31,5 @@ gulp.task('watch', function() {
 
 gulp.task('default', ['scss','babel','pug','watch'])
 
-  
+
 
