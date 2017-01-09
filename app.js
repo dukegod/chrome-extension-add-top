@@ -5,4 +5,6 @@ require('./base.css');
 
 require('js/test.js');
 
-require('./src/scss/base.scss');
+require('./src/css/base.scss');
+
+require('./src/css/section.less');
