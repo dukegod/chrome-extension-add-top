@@ -5,7 +5,9 @@ var pug = require('gulp-pug');
 
 
 gulp.task('scss', function () {
-  return sass('./src/scss/*.scss',{style: 'expanded'})
+  return sass('./src/scss/*.scss', {
+      style: 'expanded'
+    })
     .pipe(gulp.dest('./'));
 });
 
@@ -17,19 +19,18 @@ gulp.task('babel', function () {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('pug',function(){
+gulp.task('pug', function () {
   return gulp.src('./src/pug/*.pug')
-    .pipe(pug({pretty: true}))
+    .pipe(pug({
+      pretty: true
+    }))
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
   gulp.watch('./src/scss/*.scss', ['scss']);
   gulp.watch('./src/js/*.js', ['babel']);
   gulp.watch('./src/pug/*.pug', ['pug']);
 });
 
-gulp.task('default', ['scss','babel','pug','watch'])
-
-
-
+gulp.task('default', ['scss', 'babel', 'pug', 'watch'])
