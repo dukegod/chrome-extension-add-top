@@ -1,14 +1,13 @@
-
 // const webpack = require('webpack');
 const path = require('path');
-
+const DIRNAME = __dirname;
 // console.log(__dirname);
 
 module.exports = {
-  entry: './app.js',
+  entry: path.resolve(DIRNAME,'./src/scripts/app.js'),
   output: {
     path: __dirname,
-    filename: 'bundle.js'
+    filename: './dist'
   },
   module: {
     loaders: [
@@ -26,12 +25,12 @@ module.exports = {
       }
     ]
   },
-  sassLoader: {
-    includePaths: [path.resolve(__dirname, './src/scss')]
-  },
+  // sassLoader: {
+  //   includePaths: [path.resolve(__dirname, './src/scss')]
+  // },
   resolve:{
     alias: {
-      js: path.join(__dirname, './src/js')
+      scripts: path.join(__dirname, './src/scripts')
     },
     extensions: ['', '.js']
   }
