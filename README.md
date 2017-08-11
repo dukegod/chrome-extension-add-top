@@ -10,6 +10,8 @@ load extension by manifest file!
 
 ### 插件开发步骤总结
 
+[extensions](https://developers.chrome.com/extensions)
+
 主要是 manifest.json文件，配置文件入口，项目权限
 
 ### 谷歌API接口文档
